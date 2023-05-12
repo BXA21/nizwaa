@@ -1,0 +1,139 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nizwa</title>
+    <link rel="stylesheet" href="Nizwa.css">
+</head>
+<body>
+    <!---navbar start-->
+    <nav>
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="Tourism.html">Tourism in Nizwa</a></li>
+            <li><a href="History.html">Nizwa History</a></li>
+            <li><a href="Transportation.html">Transportation</a></li>
+            <li><a href="Contact.html">Contact page</a></li>
+          </ul>
+    </nav>
+     <!---navbar end-->
+
+
+     <!---Header start-->
+<header>
+    <div class="header-video">
+        <video autoplay loop muted>
+            <source src="images/Nizwa Oman.mp4" type="video/mp4">
+        </video>
+        <div class="text-overlay"><h2>Welcome to Nizwa</h2></div>
+        <div class="text-overlay-overlay"></div>
+    </div>
+</header>
+<script>
+    // Change text overlay every 5 seconds
+    let textOverlay = document.querySelector('.text-overlay');
+    let textArray = ['Discover the beauty of Nizwa','Explore Nizwa','Experience the culture of Nizwa,Oman'];
+    let i = 0;
+    setInterval(function() {
+        textOverlay.innerHTML = textArray[i];
+        i++;
+        if (i >= textArray.length) {
+            i = 0;
+        }
+    }, 5000);
+</script>
+<!---Header End-->
+
+<!--About Nizwa Start-->
+<div class="container">
+    <img src="images/Nizwa_(7).jpg" alt="Nizwa" class="image">
+    <div class="text">
+      <h1>About Nizwa</h1>
+      <p>
+        Nizwa is a historic city located in the Ad Dakhiliyah region of Oman, known for its rich cultural heritage and stunning natural landscapes. The city is home to the magnificent Nizwa Fort, a UNESCO World Heritage site that dates back to the 17th century and offers panoramic views of the surrounding area. Visitors can also explore the bustling Nizwa Souq, which offers an authentic glimpse into traditional Omani life and culture.</p>
+      <p>The city is surrounded by majestic mountains and is a great starting point for exploring the rugged terrain of the nearby Jebel Akhdar mountain range. The region is also famous for its date palms and visitors can enjoy the sweet, juicy fruits at local markets and plantations. Nizwa is a must-visit destination for anyone interested in Oman's rich history, culture, and natural beauty.</p>
+    </div>
+  </div>
+  
+<br><br>
+<!--About Nizwa End-->
+
+<!--Things TO DO IN NIZWA START-->
+
+<h1><center><bold><em>places to go in Nizwa</em></bold></center></h1><br><br>
+
+    <div class="container">
+          <div class="card">
+            <img src="images/PIC 1.jpg" alt="Nizwa Fort">
+            <div class="card-content">
+              <h2 class="card-title">jabal akhdar</h2>
+              <p class="card-description">Discover the history of Nizwa at this impressive fortress.</p>
+              <a href="Tourism.html" class="card-button">Learn More</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="images/PIC 2.jpg" alt="Bahla Fort">
+            <div class="card-content">
+              <h2 class="card-title">Souq Nizwa</h2>
+              <p class="card-description">Explore the UNESCO World Heritage Site of Bahla Fort.</p>
+              <a href="Tourism.html" class="card-button">Learn More</a>
+    </div>
+    </div>
+    <div class="card">
+    <img src="images/picture11111.jpg" alt="Jabreen Castle">
+    <div class="card-content">
+    <h2 class="card-title">Jabreen Castle</h2>
+    <p class="card-description">Step back in time and marvel at the intricate architecture of Jabreen Castle.</p>
+    <a href="Tourism.html" class="card-button">Learn More</a>
+    </div>
+    </div>
+    </div>
+<!--Things TO DO IN NIZWA END-->
+
+
+
+<!--footer section Start-->
+<footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <h3>About Us</h3>
+          <p>We are a tourism company based in Nizwa, Oman. We offer a range of tours and experiences to explore the beauty and culture of this amazing city.</p>
+        <div class="col-lg-2 col-md-6 col-sm-12">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="Nizwa.html">Home</a></li>
+            <li><a href="Tourism.html">Nizwa tourism places</a></li>
+            <li><a href="History.html">Nizwa History</a></li>
+            <li><a href="Transportation.html">transportation</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <h3>Contact Us</h3>
+          <ul class="contact-info">
+            <li><i class="fas fa-map-marker-alt"></i> Nizwa, Oman</li>
+            <li><i class="fas fa-phone"></i> +968 12345678</li>
+            <li><i class="fas fa-envelope"></i> info@nizwatourism.com</li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <h3>Subscribe</h3>
+          <p>Subscribe to our newsletter to get updates on new tours and special offers.</p>
+          <form class="subscribe-form" action="#">
+            <input type="email" name="email" placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <p class="copy-text"><em>© 2023 Nizwa Tourism. All Rights to Abdulrazzaq Mohammed.</em></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+<!--footer section END-->
+</body>
+</html>

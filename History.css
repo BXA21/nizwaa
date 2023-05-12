@@ -1,0 +1,470 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-image: url(images/timeline.jpg);
+    background:scroll rgb(170, 170, 158);
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  
+
+
+
+/* Set font for entire document */
+body {
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  /* Add responsive design for mobile devices */
+  @media (max-width: 768px) {
+    /* Adjust size and position of timeline blocks */
+    .timeline-block {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  
+    /* Adjust size of timeline content */
+    .timeline-content {
+      padding: 20px;
+    }
+  
+    /* Adjust size and position of marker */
+    .marker {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      left: -15px;
+    }
+  
+    /* Adjust position of left timeline blocks */
+    .timeline-block.left .timeline-content {
+      margin-left: 0;
+      margin-right: 60px;
+      text-align: right;
+    }
+  
+    /* Adjust position of right timeline blocks */
+    .timeline-block.right .timeline-content {
+      margin-left: 60px;
+      margin-right: 0;
+      text-align: left;
+    }
+  } 
+  
+  /* Adjust size of container */
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 0;
+  } 
+  
+  /* Add custom styles for timeline heading */
+  .timeline h2 {
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  /* Add custom styles for timeline blocks */
+  .timeline-block {
+    position: relative;
+    width: 50%;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .timeline-block:nth-child(even) .timeline-content {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  
+  .timeline-block:nth-child(odd) .timeline-content {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  
+  /* Add custom styles for marker */
+  .marker {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border: 4px solid #2196f3;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+  } 
+  
+  /* Add custom styles for timeline content */
+  .timeline-content {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    z-index: 9;
+    transition: all 0.3s ease-in-out;
+  } 
+  
+  /* Add custom styles for timeline heading */
+  .timeline-content h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 0;
+  }
+  
+  /* Add custom styles for timeline description */
+  .timeline-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 0;
+  } 
+  
+  /* Add custom styles for active state */
+  .active .timeline-content {
+    border-color: #2196f3;
+    background-color: #2196f3;
+    color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  .active .marker {
+    background-color:2196f3;
+  border-color: #fff;
+  }
+  
+  /* Add hover state */
+  .timeline-block:hover .timeline-content {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  .timeline-block:hover .marker {
+  border-color: #ccc;
+  }
+  
+  /* Add animations for marker and timeline content */
+  .timeline-block.left .marker,
+  .timeline-block.right .marker {
+  animation-name: bounce-in;
+  animation-duration: 1s;
+  }
+  
+  .timeline-block.left .timeline-content,
+  .timeline-block.right .timeline-content {
+  animation-name: slide-in;
+  animation-duration: 1s;
+  }
+  
+  @keyframes bounce-in {
+  0% {
+  transform: translateY(-100px);
+  opacity: 0;
+  }
+  
+  100% {
+  transform: translateY(0);
+  opacity: 1;
+  }
+  }
+  
+  @keyframes slide-in {
+  0% {
+  transform: translateX(-100%);
+  opacity: 0;
+  }
+  
+  100% {
+  transform: translateX(0);
+  opacity: 1;
+  }
+  }
+  /* Timeline section styles */
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Timeline title styles */
+  .timeline h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 60px;
+  }
+  
+  /* Timeline container styles */
+  .timeline .container {
+    position: relative;
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Timeline block styles */
+  .timeline-block {
+    position: relative;
+    width: 45%;
+    margin-bottom: 80px;
+  }
+  
+  /* Timeline block position */
+  .timeline-block.left {
+    left: 0;
+    text-align: right;
+  }
+  
+  .timeline-block.right {
+    left: auto;
+    right: 0;
+    text-align: left;
+  }
+  
+  /* Timeline marker styles */
+  .timeline-block .marker {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid #2196f3;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Timeline content styles */
+  .timeline-block .timeline-content {
+    position: relative;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 2;
+  }
+  
+  /* Timeline title styles */
+  .timeline-block .timeline-content h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #222;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  /* Timeline description styles */
+  .timeline-block .timeline-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+    margin: 0;
+  }
+  
+  /* Add active state */
+  .timeline-block.active .timeline-content {
+    background-color: #2196f3;
+    color: #fff;
+    border-color: #fff;
+  }
+  
+  .timeline-block.active .marker {
+    border-color: #fff;
+  }
+  
+  /* Add hover state */
+  .timeline-block:hover .timeline-content {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  .timeline-block:hover .marker {
+    border-color: #ccc;
+  }
+  
+  /* Add animations for marker and timeline content */
+  /* Timeline Styles */
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 50px auto;
+  }
+  
+  .timeline h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 2px;
+    background-color: #d9d9d9;
+  }
+  
+  .container {
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .timeline-block {
+    position: relative;
+    margin-bottom: 100px;
+  }
+  
+  .timeline-block .marker {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    z-index: 999;
+    background-color: #fff;
+    border: 4px solid #d9d9d9;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .timeline-block .timeline-content {
+    position: relative;
+    background-color: #f5f5f5;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    z-index: 998;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .timeline-block.right .marker {
+    left: auto;
+    right: 50%;
+  }
+  
+  .timeline-block.right .timeline-content {
+    text-align: right;
+  }
+  
+  .timeline-block.left .timeline-content {
+    text-align: left;
+  }
+  
+  .timeline-block.left .marker {
+    left: 50%;
+  }
+  
+  .timeline-block:nth-child(odd) .marker {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  
+  .timeline-block:nth-child(even) .marker {
+    transform: translate(-50%, -50%) rotate(-135deg);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .timeline:before {
+      left: 20px;
+      transform: none;
+    }
+    
+    .timeline-block .marker {
+      left: 0;
+      transform: none;
+    }
+  
+    .timeline-block.right .marker {
+      left: auto;
+      right: 0;
+    }
+  
+    .timeline-block .timeline-content {
+      width: calc(100% - 80px);
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+  
+    .timeline-block.right .timeline-content {
+      text-align: right;
+    }
+  
+    .timeline-block.left .timeline-content {
+      text-align: left;
+    }
+  
+    .timeline-block:nth-child(odd) .marker {
+      transform: none;
+      position: relative;
+    }
+  
+    .timeline-block:nth-child(odd) .marker:before {
+      content: '';
+      position: absolute;
+      top: -30px;
+      right: 0;
+      width: 200px;
+      text-align: center;
+    }
+  
+    .timeline-block:nth-child(even) .marker {
+      transform: none;
+      position: relative;
+    }
+  
+    .timeline-block:nth-child(even) .marker:before {
+      content: '';
+      position: absolute;
+      top: -30px;
+      left: 0;
+      width: 200px;
+    }
+  }
